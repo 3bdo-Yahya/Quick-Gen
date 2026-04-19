@@ -9,17 +9,18 @@ namespace Quick_Gen.Controllers;
 [Route("api/[controller]")]
 public sealed class CertificatesController(ICertificateService certService) : ControllerBase
 {
-    private string UserId =>
-        User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-
     // POST api/certificates/generate/course/5
     [HttpPost("generate/course/{courseId:int}")]
     [Authorize]
     public async Task<IActionResult> GenerateForCourse(int courseId)
     {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrWhiteSpace(userId))
+            return Unauthorized();
+
         try
         {
-            var cert = await certService.GenerateForCourseAsync(UserId, courseId);
+            var cert = await certService.GenerateForCourseAsync(userId, courseId);
             return Ok(cert);
         }
         catch (KeyNotFoundException ex) { return NotFound(ex.Message); }
@@ -29,8 +30,14 @@ public sealed class CertificatesController(ICertificateService certService) : Co
     // GET api/certificates/my
     [HttpGet("my")]
     [Authorize]
-    public async Task<IActionResult> MyCertificates() =>
-        Ok(await certService.GetUserCertificatesAsync(UserId));
+    public async Task<IActionResult> MyCertificates()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrWhiteSpace(userId))
+            return Unauthorized();
+
+        return Ok(await certService.GetUserCertificatesAsync(userId));
+    }
 
     // GET api/certificates/verify/CERT-2026-XXXXXXXX
     [HttpGet("verify/{number}")]
@@ -43,7 +50,7 @@ public sealed class CertificatesController(ICertificateService certService) : Co
 
     // GET api/certificates/CERT-2026-XXXXXXXX/pdf
     [HttpGet("{number}/pdf")]
-    [AllowAnonymous]
+    [Authorize]
     public async Task<IActionResult> DownloadPdf(string number)
     {
         try
