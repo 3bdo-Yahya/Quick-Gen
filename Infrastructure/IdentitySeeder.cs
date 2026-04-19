@@ -270,23 +270,20 @@ public static class IdentitySeeder
             (cSharpBasics.Id, 1),
             (aspNetApis.Id, 2),
             (efCore.Id, 3),
-            (cleanArchitecture.Id, 4),
-            cancellationToken: cancellationToken).ConfigureAwait(false);
+            (cleanArchitecture.Id, 4)).ConfigureAwait(false);
 
         await ReplacePathCoursesAsync(
             db,
             fundamentalsPath.Id,
             (cSharpBasics.Id, 1),
             (sqlCourse.Id, 2),
-            (aspNetApis.Id, 3),
-            cancellationToken: cancellationToken).ConfigureAwait(false);
+            (aspNetApis.Id, 3)).ConfigureAwait(false);
 
         await ReplacePathCoursesAsync(
             db,
             dataPath.Id,
             (sqlCourse.Id, 1),
-            (efCore.Id, 2),
-            cancellationToken: cancellationToken).ConfigureAwait(false);
+            (efCore.Id, 2)).ConfigureAwait(false);
 
         await EnsureEnrollmentAsync(db, student1.Id, cSharpBasics.Id, 100, cancellationToken).ConfigureAwait(false);
         await EnsureEnrollmentAsync(db, student1.Id, aspNetApis.Id, 40, cancellationToken).ConfigureAwait(false);
@@ -429,16 +426,15 @@ public static class IdentitySeeder
     private static async Task ReplacePathCoursesAsync(
         ApplicationDbContext db,
         int pathId,
-        CancellationToken cancellationToken,
         params (int courseId, int sortOrder)[] ordering)
     {
         var existing = await db.PathCourses
             .Where(pc => pc.LearningPathId == pathId)
-            .ToListAsync(cancellationToken)
+            .ToListAsync()
             .ConfigureAwait(false);
 
         db.PathCourses.RemoveRange(existing);
-        await db.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+        await db.SaveChangesAsync().ConfigureAwait(false);
 
         if (ordering.Length == 0)
             return;
@@ -450,7 +446,7 @@ public static class IdentitySeeder
             SortOrder = x.sortOrder,
         }));
 
-        await db.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+        await db.SaveChangesAsync().ConfigureAwait(false);
     }
 
     private static async Task EnsureEnrollmentAsync(

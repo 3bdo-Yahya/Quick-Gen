@@ -16,7 +16,7 @@ public sealed class UserService(
         var roles = await um.GetRolesAsync(u);
         return new UserResponse(
             u.Id,
-            u.FullName,
+            u.FullName ?? string.Empty,
             u.Email ?? string.Empty,
             roles.FirstOrDefault() ?? "Student",
             u.LockoutEnd.HasValue && u.LockoutEnd > DateTimeOffset.UtcNow,
