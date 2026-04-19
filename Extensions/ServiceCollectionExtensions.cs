@@ -42,6 +42,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IAdminPathService, AdminPathService>();
         services.AddScoped<IEnrollmentService, EnrollmentService>();
         services.AddScoped<ICertificateService , CertificateService>();
+        services.AddScoped<IUserService , UserService>();
 
         return services;
     }
