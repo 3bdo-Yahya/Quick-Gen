@@ -7,7 +7,7 @@ namespace Quick_Gen.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-//[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin")]
 public sealed class UsersController(IUserService userService) : ControllerBase
 {
     // GET api/users
