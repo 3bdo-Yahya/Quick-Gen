@@ -37,6 +37,7 @@ public static class ServiceCollectionExtensions
             .AddDefaultTokenProviders();
 
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<ICourseService, CourseService>();
 
         return services;
     }
