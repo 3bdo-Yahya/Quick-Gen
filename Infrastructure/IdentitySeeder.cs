@@ -24,8 +24,10 @@ public static class IdentitySeeder
 
         var userManager = provider.GetRequiredService<UserManager<ApplicationUser>>();
         var configuration = provider.GetRequiredService<IConfiguration>();
-        var adminEmail = configuration["Seed:AdminEmail"] ?? "admin@quickgen.local";
-        var adminPassword = configuration["Seed:AdminPassword"] ?? "yousef@123";
+        var configuredAdminEmail = configuration["Seed:AdminEmail"];
+        var configuredAdminPassword = configuration["Seed:AdminPassword"];
+        var adminEmail = string.IsNullOrWhiteSpace(configuredAdminEmail) ? "admin@quickgen.local" : configuredAdminEmail;
+        var adminPassword = string.IsNullOrWhiteSpace(configuredAdminPassword) ? "Admin123!" : configuredAdminPassword;
 
         var admin = await EnsureUserAsync(
             userManager,
