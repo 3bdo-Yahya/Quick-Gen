@@ -5,12 +5,10 @@
         string Title,
         string ShortDescription,
         string? ThumbnailUrl,
-        string Difficulty,
         int CatalogLevel,
         int DurationWeeks,
         int LessonCount,
         bool IsLocked,
-        string Status,
         bool IsFree
     );
 }

@@ -11,8 +11,8 @@ public sealed class CourseService(ApplicationDbContext db) : ICourseService
     //Helpers 
     private static CourseResponse ToResponse(Course c) => new(
         c.Id, c.Title, c.ShortDescription, c.ThumbnailUrl,
-        c.Difficulty.ToString(), c.CatalogLevel, c.DurationWeeks,
-        c.LessonCount, c.IsLocked, c.Status.ToString(), c.IsFree);
+        c.CatalogLevel, c.DurationWeeks,
+        c.LessonCount, c.IsLocked, c.IsFree);
 
     //Get all 
     public async Task<IEnumerable<CourseResponse>> GetAllAsync() =>
