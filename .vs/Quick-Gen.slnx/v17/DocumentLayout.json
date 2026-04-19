@@ -7,32 +7,8 @@
       "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\infrastructure\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:infrastructure\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\quick-gen.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:quick-gen.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\configuration\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:configuration\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\quick-gen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:quick-gen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,106 +34,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:03:48.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IdentitySeeder.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Infrastructure\\IdentitySeeder.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\IdentitySeeder.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Infrastructure\\IdentitySeeder.cs",
-              "RelativeToolTip": "Infrastructure\\IdentitySeeder.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:00:54.209Z",
+              "Title": "Quick-Gen",
+              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.csproj",
+              "RelativeDocumentMoniker": "Quick-Gen.csproj",
+              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.csproj*",
+              "RelativeToolTip": "Quick-Gen.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-19T13:09:22.463Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Quick-Gen.http",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.http",
-              "RelativeDocumentMoniker": "Quick-Gen.http",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.http",
-              "RelativeToolTip": "Quick-Gen.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-04-19T11:57:55.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Course.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "Models\\Course.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Models\\Course.cs",
-              "RelativeToolTip": "Models\\Course.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:51:48.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:49:55.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HealthController.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\HealthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HealthController.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\HealthController.cs",
-              "RelativeToolTip": "Controllers\\HealthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:49:47.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:49:42.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Configuration\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "Configuration\\JwtOptions.cs",
-              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Configuration\\JwtOptions.cs",
-              "RelativeToolTip": "Configuration\\JwtOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T11:47:57.691Z"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T13:00:04.955Z",
+              "EditorCaption": ""
             }
           ]
         }
