@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Quick_Gen.Models;
+using System.Reflection.Emit;
 
 namespace Quick_Gen.Data;
 
@@ -28,7 +29,10 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             entity.Property(c => c.ShortDescription).HasMaxLength(4000);
             entity.Property(c => c.ThumbnailUrl).HasMaxLength(2000);
         });
-
+        builder.Entity<Certificate>()
+        .HasIndex(c => new { c.UserId, c.CourseId })
+        .IsUnique()
+        .HasFilter("[CourseId] IS NOT NULL");
         builder.Entity<Lesson>(entity =>
         {
             entity.Property(l => l.Title).HasMaxLength(500);
@@ -61,6 +65,7 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .HasForeignKey(pc => pc.CourseId)
                 .OnDelete(DeleteBehavior.Restrict);
         });
+
 
         builder.Entity<Enrollment>(entity =>
         {
@@ -105,7 +110,6 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     "CK_Certificate_HasCourseOrPath",
                     "([CourseId] IS NOT NULL) OR ([LearningPathId] IS NOT NULL)"));
         });
-
-       
+     
     }
 }
