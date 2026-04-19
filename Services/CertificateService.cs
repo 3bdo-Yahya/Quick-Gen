@@ -27,31 +27,26 @@ public sealed class CertificateService(
     // Generate
     public async Task<CertificateResponse> GenerateForCourseAsync(string userId, int courseId)
     {
-        
         var course = await db.Courses.FindAsync(courseId)
             ?? throw new KeyNotFoundException("Course not found.");
 
-      
         var user = await db.Users.FindAsync(userId)
             ?? throw new KeyNotFoundException("User not found.");
 
-     
         var enrollment = await db.Enrollments
             .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == courseId)
             ?? throw new InvalidOperationException("User is not enrolled in this course.");
 
- 
         if (enrollment.ProgressPercent < 100)
             throw new InvalidOperationException("Course not completed yet.");
 
-    
+        // لو موجودة ارجعها
         var existing = await db.Certificates
             .FirstOrDefaultAsync(c => c.UserId == userId && c.CourseId == courseId);
 
         if (existing is not null)
             return ToResponse(existing);
 
- 
         var certificate = new Certificate
         {
             CertificateNumber = GenerateCertificateNumber(),
@@ -63,11 +58,22 @@ public sealed class CertificateService(
         };
 
         db.Certificates.Add(certificate);
-        await db.SaveChangesAsync();
+
+        try
+        {
+            await db.SaveChangesAsync();
+        }
+        catch (DbUpdateException)
+        {
+            // Race Condition — شهادة اتعملت قبل كده
+            var created = await db.Certificates
+                .FirstOrDefaultAsync(c => c.UserId == userId && c.CourseId == courseId);
+
+            return ToResponse(created!);
+        }
 
         return ToResponse(certificate);
     }
-
     //Verify
     public async Task<CertificateResponse?> GetByNumberAsync(string certificateNumber)
     {
