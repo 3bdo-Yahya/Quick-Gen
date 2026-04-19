@@ -105,5 +105,7 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                     "CK_Certificate_HasCourseOrPath",
                     "([CourseId] IS NOT NULL) OR ([LearningPathId] IS NOT NULL)"));
         });
+
+       
     }
 }
