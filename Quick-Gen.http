@@ -1,0 +1,37 @@
+@Quick_Gen_HostAddress = http://localhost:5176
+
+### Health (no auth)
+GET {{Quick_Gen_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+### Register (Student role)
+POST {{Quick_Gen_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "اختبار الطالب",
+  "email": "student@example.com",
+  "password": "Abcd1234"
+}
+
+###
+
+### Login
+POST {{Quick_Gen_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "Abcd1234"
+}
+
+###
+
+### Me (paste Bearer token from login response)
+GET {{Quick_Gen_HostAddress}}/api/auth/me
+Authorization: Bearer REPLACE_WITH_TOKEN
+Accept: application/json
+
+###
