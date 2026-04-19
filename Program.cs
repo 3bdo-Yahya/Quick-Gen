@@ -13,11 +13,15 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi(); 
+    app.MapOpenApi();
     app.MapScalarApiReference(options =>
     {
         options.Title = "Quick Gen API";
         options.DefaultHttpClient = new(ScalarTarget.CSharp, ScalarClient.HttpClient);
+        options.AddHttpAuthentication("Bearer", scheme =>
+        {
+            scheme.Token = "";
+        });
     });
 }
 
