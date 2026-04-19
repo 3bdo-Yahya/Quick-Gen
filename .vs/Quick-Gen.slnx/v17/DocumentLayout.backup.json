@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\quick-gen.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:quick-gen.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|f:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\quick-gen\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31BAD612-69E4-FCDC-591E-9FCC41F24F0C}|Quick-Gen.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Quick-Gen.http",
+              "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.http",
+              "RelativeDocumentMoniker": "Quick-Gen.http",
+              "ToolTip": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Quick-Gen.http",
+              "RelativeToolTip": "Quick-Gen.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-04-19T11:57:55.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Course.cs",
               "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Models\\Course.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HealthController.cs",
               "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Controllers\\HealthController.cs",
               "RelativeDocumentMoniker": "Controllers\\HealthController.cs",
@@ -85,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "F:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0628\u0642\u0629\\Quick-Gen\\Configuration\\JwtOptions.cs",
               "RelativeDocumentMoniker": "Configuration\\JwtOptions.cs",

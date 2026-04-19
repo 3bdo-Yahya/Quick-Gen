@@ -1,6 +1,6 @@
 using Quick_Gen.Models;
 
-namespace Quick_Gen.Services;
+namespace Quick_Gen.Services.IServices;
 
 public interface ITokenService
 {

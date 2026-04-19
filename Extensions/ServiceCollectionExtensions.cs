@@ -7,6 +7,7 @@ using Quick_Gen.Configuration;
 using Quick_Gen.Data;
 using Quick_Gen.Models;
 using Quick_Gen.Services;
+using Quick_Gen.Services.IServices;
 
 namespace Quick_Gen.Extensions;
 

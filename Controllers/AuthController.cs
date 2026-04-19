@@ -5,7 +5,7 @@ using System.Security.Claims;
 using Quick_Gen.Contracts;
 using Quick_Gen.Infrastructure;
 using Quick_Gen.Models;
-using Quick_Gen.Services;
+using Quick_Gen.Services.IServices;
 
 namespace Quick_Gen.Controllers;
 
