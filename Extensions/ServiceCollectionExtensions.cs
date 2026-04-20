@@ -16,11 +16,20 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddQuickGenPersistence(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
+
         if (string.IsNullOrWhiteSpace(connectionString))
-            throw new InvalidOperationException("Connection string 'DefaultConnection' is missing. Check appsettings or user secrets.");
+            throw new InvalidOperationException("Connection string 'DefaultConnection' is missing.");
 
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(connectionString));
+            options.UseSqlServer(
+                connectionString,
+                sqlOptions =>
+                {
+                    sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 5,
+                        maxRetryDelay: TimeSpan.FromSeconds(10),
+                        errorNumbersToAdd: null);
+                }));
 
         services
             .AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -41,9 +50,9 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IPathService, PathService>();
         services.AddScoped<IAdminPathService, AdminPathService>();
         services.AddScoped<IEnrollmentService, EnrollmentService>();
-        services.AddScoped<ICertificateService , CertificateService>();
-        services.AddScoped<IUserService , UserService>();
-      
+        services.AddScoped<ICertificateService, CertificateService>();
+        services.AddScoped<IUserService, UserService>();
+
         return services;
     }
 
@@ -58,28 +67,27 @@ public static class ServiceCollectionExtensions
         var key = jwtSection["Key"];
 
         if (string.IsNullOrWhiteSpace(key) || key.Length < 32)
-            throw new InvalidOperationException(
-                "Jwt:Key must be configured (min 32 chars). Use dotnet user-secrets set \"Jwt:Key\" \"...\" or appsettings.Development.json.");
+            throw new InvalidOperationException("Jwt:Key must be at least 32 characters.");
 
         services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = issuer,
-                    ValidAudience = audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
-                    ClockSkew = TimeSpan.FromMinutes(1),
-                };
-            });
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = issuer,
+                ValidAudience = audience,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+                ClockSkew = TimeSpan.FromMinutes(1)
+            };
+        });
 
         services.AddAuthorization();
 
