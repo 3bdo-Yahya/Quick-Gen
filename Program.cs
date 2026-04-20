@@ -8,6 +8,8 @@ builder.Services.AddQuickGenPersistence(builder.Configuration);
 builder.Services.AddQuickGenJwtAuthentication(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 var app = builder.Build();
 
