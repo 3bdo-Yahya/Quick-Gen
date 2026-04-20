@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Quick_Gen.Contracts.Certificates;
 using Quick_Gen.Data;
 using Quick_Gen.Infrastructure;
@@ -23,6 +24,14 @@ public sealed class CertificateService(
 
     private static string GenerateCertificateNumber() =>
         $"CERT-{DateTime.UtcNow.Year}-{Guid.NewGuid().ToString()[..8].ToUpper()}";
+
+    private static bool IsUniqueConstraintViolation(DbUpdateException ex)
+    {
+        if (ex.InnerException is SqlException sqlEx)
+            return sqlEx.Number is 2601 or 2627;
+
+        return ex.InnerException?.Message.Contains("UNIQUE", StringComparison.OrdinalIgnoreCase) == true;
+    }
 
     // Generate
     public async Task<CertificateResponse> GenerateForCourseAsync(string userId, int courseId)
@@ -63,13 +72,15 @@ public sealed class CertificateService(
         {
             await db.SaveChangesAsync();
         }
-        catch (DbUpdateException)
+        catch (DbUpdateException ex) when (IsUniqueConstraintViolation(ex))
         {
-            // Race Condition — شهادة اتعملت قبل كده
+            // Duplicate create race: retrieve the already-created row if it exists.
             var created = await db.Certificates
                 .FirstOrDefaultAsync(c => c.UserId == userId && c.CourseId == courseId);
+            if (created is null)
+                throw;
 
-            return ToResponse(created!);
+            return ToResponse(created);
         }
 
         return ToResponse(certificate);
