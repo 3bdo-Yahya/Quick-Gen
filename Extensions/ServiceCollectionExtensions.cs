@@ -43,7 +43,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IEnrollmentService, EnrollmentService>();
         services.AddScoped<ICertificateService , CertificateService>();
         services.AddScoped<IUserService , UserService>();
-
+      
         return services;
     }
 
