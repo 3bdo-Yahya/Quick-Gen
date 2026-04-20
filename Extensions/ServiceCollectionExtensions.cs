@@ -30,6 +30,7 @@ public static class ServiceCollectionExtensions
                         maxRetryDelay: TimeSpan.FromSeconds(10),
                         errorNumbersToAdd: null);
                 }));
+      
 
         services
             .AddIdentity<ApplicationUser, IdentityRole>(options =>
